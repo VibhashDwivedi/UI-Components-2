@@ -11,6 +11,7 @@ const form = document.getElementById('form');
 
 myDiv.addEventListener('click', function() {
     console.log('You clicked on pay by card option!');
+    cardPay2.classList.remove('changed');
     // change display of pay-btn
     if (pay.style.display === 'none') {
         pay.style.display = 'block';
@@ -32,7 +33,9 @@ myDiv2.addEventListener('click', function() {
     console.log('You chose to pay later!');
     // change display of pay-btn
     
-    
+    cardPay.classList.remove('changed');
+    pay.style.display = 'none';
+    form.reset();
 
     if (cardPay2.classList.contains('changed')) {
         cardPay2.classList.remove('changed');
